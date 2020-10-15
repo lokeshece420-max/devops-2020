@@ -12,11 +12,11 @@ def project_path = "02-Jenkins/petclinic-code"
 dir(project_path) {
 
 stage('Maven Clean') {    
-sh 'mvn clean'
+sh 'mvn clea'
 }
 
 stage('Maven Compiling') {    
-sh 'mvn compile'
+sh 'mvn comple'
 }
 
 stage('Maven Testing') {    
@@ -49,7 +49,7 @@ notify('Done')
 
 def notify(status){
    emailext ( 
-      to: "amitvashist7@outlook.com",
+      to: "lokeshece47@gmail.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
             <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMVER}]</a></p>""",
