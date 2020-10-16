@@ -5,7 +5,7 @@ notify('Started')
 try {
 
 stage('Git CheckOut') {    
-git branch: 'main', url: 'https://github.com/lokeshece420-max/devops-2020.git'
+git branch: 'main', url: 'https://github.com/amitvashisttech/devops-accenture-2020Oct12.git'
 }
 
 def project_path = "02-Jenkins/petclinic-code"
