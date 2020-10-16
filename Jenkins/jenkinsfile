@@ -5,10 +5,10 @@ notify('Started')
 try {
 
 stage('Git CheckOut') {    
-git branch: 'main', url: 'https://github.com/amitvashisttech/devops-accenture-2020Oct12.git'
+git branch: 'main', url: 'https://github.com/lokeshece420-max/devops-2020.git'
 }
 
-def project_path = "02-Jenkins/petclinic-code"
+def project_path = "Jenkins/petclinic-code"
 dir(project_path) {
 
 stage('Maven Clean') {    
@@ -64,7 +64,7 @@ notify('Done')
 
 def notify(status){
    emailext ( 
-      to: "amitvashist7@outlook.com",
+      to: "lokeshece47@gmail.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
             <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMVER}]</a></p>""",
